@@ -1,7 +1,7 @@
 (def ks-version "1.1.0")
 (def tk-version "1.1.1")
 
-(defproject puppetlabs/trapperkeeper-comidi-metrics "0.1.1-SNAPSHOT"
+(defproject puppetlabs/trapperkeeper-comidi-metrics "0.1.1"
   :description "Comidi/HTTP Metrics for Trapperkeeper"
   :url "http://github.com/puppetlabs/trapperkeeper-comidi-metrics"
 
