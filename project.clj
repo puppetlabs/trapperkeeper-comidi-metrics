@@ -18,6 +18,11 @@
                  [puppetlabs/trapperkeeper-metrics "0.1.1"]
                  [puppetlabs/comidi "0.1.3"]]
 
+  :deploy-repositories [["releases" {:url "https://clojars.org/repo"
+                                     :username :env/clojars_jenkins_username
+                                     :password :env/clojars_jenkins_password
+                                     :sign-releases false}]]
+
   :profiles {:dev {:source-paths ["dev"]
                    :dependencies [[puppetlabs/trapperkeeper ~tk-version :classifier "test" :exclusions [org.clojure/tools.macro]]
                                   [puppetlabs/kitchensink ~ks-version :classifier "test"]
