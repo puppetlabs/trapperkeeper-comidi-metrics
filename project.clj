@@ -1,7 +1,7 @@
 (def ks-version "1.1.0")
 (def tk-version "1.1.1")
 
-(defproject puppetlabs/trapperkeeper-comidi-metrics "0.1.0-SNAPSHOT"
+(defproject puppetlabs/trapperkeeper-comidi-metrics "0.1.1-SNAPSHOT"
   :description "Comidi/HTTP Metrics for Trapperkeeper"
   :url "http://github.com/puppetlabs/trapperkeeper-comidi-metrics"
 
@@ -15,7 +15,7 @@
 
                  [puppetlabs/kitchensink ~ks-version]
                  [puppetlabs/trapperkeeper ~tk-version :exclusions [org.clojure/tools.macro]]
-                 [puppetlabs/trapperkeeper-metrics "0.1.1-SNAPSHOT"]
+                 [puppetlabs/trapperkeeper-metrics "0.1.1"]
                  [puppetlabs/comidi "0.1.3"]]
 
   :profiles {:dev {:source-paths ["dev"]
