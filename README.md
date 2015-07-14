@@ -131,3 +131,13 @@ match any of your routes.
 For a complete example that illustrates how to expose the HTTP metrics data
 via the [Trapperkeeper Status Service](https://github.com/puppetlabs/trapperkeeper-status),
 see the [source code for the sample web application](../dev/example/comidi_metrics_web_app.clj).
+
+## License
+
+See [LICENSE](LICENSE).
+
+## Support
+
+We use the [Trapperkeeper project on
+JIRA](https://tickets.puppetlabs.com/browse/TK) for tickets on this project,
+although Github issues are welcome too.
