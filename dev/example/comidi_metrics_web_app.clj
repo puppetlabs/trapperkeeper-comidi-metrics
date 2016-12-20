@@ -98,7 +98,7 @@
                                                        :mean (get-mean :baz-task1-timer)}
                                            :baz-task2 {:count (get-count :baz-task2-timer)
                                                        :mean (get-mean :baz-task2-timer)}})))]
-        {:is-running :true
+        {:state :running
          :status status}))))
 
 (tk/defservice example-web-service
