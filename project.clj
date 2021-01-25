@@ -2,11 +2,11 @@
   :description "Comidi/HTTP Metrics for Trapperkeeper"
   :url "http://github.com/puppetlabs/trapperkeeper-comidi-metrics"
 
-  :min-lein-version "2.7.1"
+  :min-lein-version "2.9.1"
 
   :pedantic? :abort
 
-  :parent-project {:coords [puppetlabs/clj-parent "0.3.0"]
+  :parent-project {:coords [puppetlabs/clj-parent "4.6.14"]
                    :inherit [:managed-dependencies]}
 
   :dependencies [[org.clojure/clojure]
@@ -14,7 +14,7 @@
                  [puppetlabs/trapperkeeper-metrics]
                  [puppetlabs/comidi]]
 
-  :plugins [[lein-parent "0.3.1"]]
+  :plugins [[lein-parent "0.3.7"]]
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
                                      :username :env/clojars_jenkins_username
@@ -26,6 +26,7 @@
                                   [puppetlabs/kitchensink :classifier "test"]
                                   [puppetlabs/trapperkeeper-status]
                                   [puppetlabs/http-client]
+                                  [org.bouncycastle/bcpkix-jdk15on]
                                   [puppetlabs/trapperkeeper-webserver-jetty9]]}}
 
   :aliases {"example" ["run" "-m" "example.comidi-metrics-web-app"]
