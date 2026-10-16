@@ -4,7 +4,6 @@ on:
     # run every day at 3:00am
     - cron: 0 3 * * *
   workflow_dispatch:
-  push: # TEMPORARY test trigger
 
 permissions:
   contents: read
