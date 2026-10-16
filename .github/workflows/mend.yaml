@@ -4,6 +4,7 @@ on:
     # run every day at 3:00am
     - cron: 0 3 * * *
   workflow_dispatch:
+  push: # TEMPORARY test trigger
 
 permissions:
   contents: read
@@ -38,14 +39,11 @@ jobs:
         uses: DeLaGuardo/setup-clojure@bc7570e912b028bbcc22f457adec7fdf98e2f4ed # 12.5
         with:
           lein: latest                  # Leiningen
-      # run lein gen
+      # Leave out the :dev profile. `lein pom` writes :dev dependencies as
+      # test scope, and Mend drops runtime dependencies that Maven resolves
+      # underneath them, so the report would be missing shipped libraries.
       - name: create pom.xml
-        run: lein pom
-      # Mend resolves the pom with `mvn dependency:tree`, which only knows
-      # Maven Central. `lein deps` pre-populates ~/.m2/repository with the
-      # Clojars-hosted dependencies so they resolve too.
-      - name: populate local maven repo
-        run: lein deps
+        run: lein with-profile -dev pom
       # download mend
       - name: download_mend
         env:
